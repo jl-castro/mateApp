@@ -1,0 +1,7 @@
+{
+  "name": "MateApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
