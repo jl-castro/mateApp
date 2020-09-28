@@ -1,27 +1,47 @@
 #container {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: minmax(180px, 1fr) 2fr;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.resultado {
+  // border: 3px solid black;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.respuestas {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  .col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .opcion {
+      display: grid;
+      grid-template-rows: 1fr 4px 1fr;
+      margin: 5px;
+      justify-content: center;
+      border-radius: 3px;
+      p {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        font-size: xx-large;
+      }
+    }
+    .opcion:hover {
+      background-color: red;
+    }
+    hr {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      width: 40px;
+      height: 3px;
+      background-color: black;
+      margin: 0;
+    }
+  }
 }
