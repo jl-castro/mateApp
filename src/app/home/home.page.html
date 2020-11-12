@@ -1,50 +1,32 @@
 <ion-header color="dark">
-  <ion-toolbar>
-    <ion-title> MateApp </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-title> MateApp </ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="dark">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Bienvenido</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Bienvenido</ion-title>
+		</ion-toolbar>
+	</ion-header>
 
-  <div id="container">
-    <ion-card class="resultado" color="dark">
-      <ion-card-header>
-        <ion-card-subtitle>Responde...</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        {{principal.numerador}}/{{principal.denominador}}
-      </ion-card-content>
-    </ion-card>
-    <div class="respuestas">
-      <div class="col">
-        <div class="opcion">
-          <p>{{resultado1.numerador}}</p>
-          <hr />
-          <p>{{resultado1.denominador}}</p>
-        </div>
-        <div class="opcion">
-          <p>{{resultado2.numerador}}</p>
-          <hr />
-          <p>{{resultado2.denominador}}</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="opcion">
-          <p>{{resultado3.numerador}}</p>
-          <hr />
-          <p>{{resultado3.denominador}}</p>
-        </div>
-        <div class="opcion">
-          <p>{{resultado4.numerador}}</p>
-          <hr />
-          <p>{{resultado4.denominador}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div id="container">
+		<ion-card class="resultado" color="dark">
+			<ion-card-header>
+				<ion-card-subtitle>Responde...</ion-card-subtitle>
+			</ion-card-header>
+			<ion-card-content class="pregunta">
+				<!-- <div>{{principal.numerador}}/{{principal.denominador}}</div> -->
+				<div>sd</div>
+			</ion-card-content>
+		</ion-card>
+		<div class="respuestas">
+			<div class="fraccion" *ngFor="let fraccion of arrayFraccion">
+				<p>{{fraccion.numerador}}</p>
+				<hr />
+				<p>{{fraccion.denominador}}</p>
+			</div>
+		</div>
+	</div>
 </ion-content>
