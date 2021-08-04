@@ -5,7 +5,7 @@
 	text-align: center;
 }
 .resultado {
-	// border: 3px solid black;
+	background-color: rgb(236, 245, 218);
 }
 .respuestas {
 	display: grid;
@@ -38,7 +38,38 @@
 		}
 	}
 }
-.pregunta {
+
+#pregunta {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
+	margin: 5px;
+	justify-content: center;
+	height: 150px;
+
+	.alignFr {
+		display: grid;
+		justify-content: center;
+	}
+	.alignSigno {
+		display: grid;
+		justify-content: center;
+		align-content: center;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-self: center;
+		align-items: center;
+		font-size: xx-large;
+	}
+	hr {
+		display: flex;
+		align-self: center;
+		justify-self: center;
+		width: 30px;
+		height: 3px;
+		background-color: black;
+		margin: 0;
+	}
 }

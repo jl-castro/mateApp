@@ -16,13 +16,43 @@
 			<ion-card-header>
 				<ion-card-subtitle>Responde...</ion-card-subtitle>
 			</ion-card-header>
-			<ion-card-content class="pregunta">
-				<!-- <div>{{principal.numerador}}/{{principal.denominador}}</div> -->
-				<div>sd</div>
+
+			<ion-card-content>
+				<section id="pregunta">
+					<div class="alignFr">
+						<p>{{pregunta1.numerador}}</p>
+						<hr />
+						<p>{{pregunta1.denominador}}</p>
+					</div>
+
+					<div class="alignSigno">
+						<p>+</p>
+					</div>
+
+					<div class="alignFr">
+						<p>{{pregunta2.numerador}}</p>
+						<hr />
+						<p>{{pregunta2.denominador}}</p>
+					</div>
+
+					<div class="alignSigno">
+						<p>=</p>
+					</div>
+
+					<div class="alignFr" *ngIf="swRespuesta">
+						<p>{{resultado.numerador}}</p>
+						<hr />
+						<p>{{resultado.denominador}}</p>
+					</div>
+
+					<div class="alignFr" *ngIf="!swRespuesta">
+						<p>?</p>
+					</div>
+				</section>
 			</ion-card-content>
 		</ion-card>
 		<div class="respuestas">
-			<div class="fraccion" *ngFor="let fraccion of arrayFraccion">
+			<div class="fraccion" *ngFor="let fraccion of arrayOpciones" (click)="verificaRespuesta(fraccion)">
 				<p>{{fraccion.numerador}}</p>
 				<hr />
 				<p>{{fraccion.denominador}}</p>
